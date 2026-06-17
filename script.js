@@ -1,42 +1,69 @@
-/* ==========================
+/* =========================
    MOBILE MENU
-========================== */
+========================= */
 
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
 
 menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-/* ==========================
+/* =========================
    CLOSE MENU AFTER CLICK
-========================== */
+========================= */
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
     link.addEventListener("click", () => {
-
         navLinks.classList.remove("active");
-
     });
 
 });
 
-/* ==========================
-   HEADER SCROLL EFFECT
-========================== */
+/* =========================
+   HERO VIDEO SOUND
+========================= */
+
+const heroVideo = document.getElementById("heroVideo");
+const soundBtn = document.getElementById("soundBtn");
+
+if(heroVideo && soundBtn){
+
+    soundBtn.addEventListener("click", () => {
+
+        heroVideo.muted = !heroVideo.muted;
+
+        if(heroVideo.muted){
+
+            soundBtn.textContent = "Enable Sound";
+
+        }else{
+
+            soundBtn.textContent = "Mute Sound";
+
+        }
+
+        heroVideo.play();
+
+    });
+
+}
+
+/* =========================
+   STICKY NAVBAR EFFECT
+========================= */
 
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 80){
+    if(window.scrollY > 100){
 
-        header.style.background = "#111111";
+        header.style.background = "#111";
         header.style.boxShadow = "0 5px 20px rgba(0,0,0,.15)";
 
-    } else {
+    }else{
 
         header.style.background = "rgba(0,0,0,.85)";
         header.style.boxShadow = "none";
@@ -45,81 +72,13 @@ window.addEventListener("scroll", () => {
 
 });
 
-/* ==========================
-   SCROLL REVEAL ANIMATION
-========================== */
-
-const reveals = document.querySelectorAll(
-    ".program-card, .gallery-item, .why-card, .step, .about-image, .about-content"
-);
-
-function revealElements(){
-
-    const trigger = window.innerHeight - 120;
-
-    reveals.forEach(item => {
-
-        const top = item.getBoundingClientRect().top;
-
-        if(top < trigger){
-
-            item.classList.add("show");
-
-        }
-
-    });
-
-}
-
-window.addEventListener("scroll", revealElements);
-window.addEventListener("load", revealElements);
-
-/* ==========================
-   ACTIVE NAVIGATION LINK
-========================== */
-
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
-
-        if(window.scrollY >= sectionTop){
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("current");
-
-        if(link.getAttribute("href") === "#" + current){
-
-            link.classList.add("current");
-
-        }
-
-    });
-
-});
-
-/* ==========================
+/* =========================
    GALLERY LIGHTBOX
-========================== */
+========================= */
 
-const galleryImages = document.querySelectorAll(".gallery-item img");
+const galleryImages = document.querySelectorAll(".gallery-grid img");
 
 const lightbox = document.createElement("div");
-
 lightbox.id = "lightbox";
 
 document.body.appendChild(lightbox);
@@ -152,128 +111,133 @@ lightbox.addEventListener("click", () => {
 
 });
 
-/* ==========================
-   AUTO GALLERY SLIDER
-========================== */
+/* =========================
+   FORM SUBMISSION DEMO
+========================= */
 
-const galleryItems = document.querySelectorAll(".gallery-item");
+const inquiryForm = document.querySelector(".inquiry-form");
 
-let galleryIndex = 0;
+if(inquiryForm){
 
-setInterval(() => {
-
-    galleryItems.forEach(item => {
-
-        item.style.opacity = "0.6";
-
-    });
-
-    galleryItems[galleryIndex].style.opacity = "1";
-
-    galleryItems[galleryIndex].style.transform = "scale(1.03)";
-
-    setTimeout(() => {
-
-        galleryItems[galleryIndex].style.transform = "scale(1)";
-
-    }, 5000);
-
-    galleryIndex++;
-
-    if(galleryIndex >= galleryItems.length){
-
-        galleryIndex = 0;
-
-    }
-
-}, 6000);
-
-/* ==========================
-   COUNTER ANIMATION
-========================== */
-
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach(counter => {
-
-    counter.innerText = "0";
-
-    const updateCounter = () => {
-
-        const target = +counter.getAttribute("data-target");
-
-        const count = +counter.innerText;
-
-        const increment = target / 100;
-
-        if(count < target){
-
-            counter.innerText = `${Math.ceil(count + increment)}`;
-
-            setTimeout(updateCounter, 25);
-
-        } else {
-
-            counter.innerText = target;
-
-        }
-
-    };
-
-    updateCounter();
-
-});
-
-/* ==========================
-   PARALLAX HERO EFFECT
-========================== */
-
-window.addEventListener("scroll", () => {
-
-    const heroVideo = document.querySelector(".hero-video");
-
-    if(heroVideo){
-
-        const value = window.scrollY * 0.2;
-
-        heroVideo.style.transform =
-            `translateY(${value}px) scale(1.1)`;
-
-    }
-
-});
-
-/* ==========================
-   INQUIRY FORM DEMO
-========================== */
-
-const form = document.querySelector(".inquiry-form");
-
-if(form){
-
-    form.addEventListener("submit", function(e){
+    inquiryForm.addEventListener("submit", function(e){
 
         e.preventDefault();
 
         alert(
-            "Thank you for your inquiry. Our admissions team will contact you soon."
+            "Thank you for your inquiry. Our admissions team will contact you shortly."
         );
 
-        form.reset();
+        inquiryForm.reset();
 
     });
 
 }
 
-/* ==========================
-   SMOOTH BUTTON HOVER
-========================== */
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements = document.querySelectorAll(
+".course-card, .testimonial, .about-image, .about-text, .gallery-grid img"
+);
+
+function revealOnScroll(){
+
+    const triggerBottom = window.innerHeight - 100;
+
+    revealElements.forEach(element => {
+
+        const boxTop = element.getBoundingClientRect().top;
+
+        if(boxTop < triggerBottom){
+
+            element.classList.add("show");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
+/* =========================
+   ACTIVE NAV LINKS
+========================= */
+
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 200;
+
+        if(window.scrollY >= sectionTop){
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navItems.forEach(link => {
+
+        link.classList.remove("active-link");
+
+        if(link.getAttribute("href") === "#" + current){
+
+            link.classList.add("active-link");
+
+        }
+
+    });
+
+});
+
+/* =========================
+   IMAGE AUTO HIGHLIGHT
+========================= */
+
+const images = document.querySelectorAll(".gallery-grid img");
+
+let currentImage = 0;
+
+setInterval(() => {
+
+    images.forEach(img => {
+
+        img.style.transform = "scale(1)";
+        img.style.opacity = "0.85";
+
+    });
+
+    images[currentImage].style.transform = "scale(1.05)";
+    images[currentImage].style.opacity = "1";
+
+    currentImage++;
+
+    if(currentImage >= images.length){
+
+        currentImage = 0;
+
+    }
+
+}, 6000);
+
+/* =========================
+   SMOOTH BUTTON EFFECT
+========================= */
 
 document.querySelectorAll(".btn").forEach(button => {
 
     button.addEventListener("mouseenter", () => {
 
-        button.style.transform = "translateY(-4px)";
+        button.style.transform = "translateY(-5px)";
 
     });
 
@@ -285,24 +249,12 @@ document.querySelectorAll(".btn").forEach(button => {
 
 });
 
-/* ==========================
-   PRELOADER EFFECT
-========================== */
+/* =========================
+   PAGE LOADED
+========================= */
 
 window.addEventListener("load", () => {
 
     document.body.classList.add("loaded");
 
 });
-
-/* ==========================
-   DYNAMIC YEAR
-========================== */
-
-const yearElement = document.querySelector(".year");
-
-if(yearElement){
-
-    yearElement.textContent = new Date().getFullYear();
-
-}

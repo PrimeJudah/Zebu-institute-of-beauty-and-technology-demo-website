@@ -3,63 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Zebu Institute of Beauty & Technology College</title>
 
-<meta name="description" content="Professional beauty and technology training at Zebu Institute of Beauty & Technology College.">
+<meta name="description" content="Professional Beauty, Barbering, Hairdressing, Nail Technology, Makeup and Spa Training at Zebu Institute of Beauty & Technology College.">
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
+
 <body>
 
 <!-- NAVBAR -->
 
 <header class="header">
 
-    <div class="container nav-container">
+<nav class="navbar">
 
-        <a href="#" class="logo">
+<div class="logo">
+Zebu Institute
+</div>
 
-            <img src="IMAGE 1.jpeg" alt="Zebu Institute Logo">
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-            <div class="logo-text">
-                <h3>Zebu Institute</h3>
-                <span>Beauty & Technology College</span>
-            </div>
+<div class="menu-btn" id="menuBtn">
+☰
+</div>
 
-        </a>
-
-        <nav class="navbar">
-
-            <ul class="nav-links">
-
-                <li><a href="#home">Home</a></li>
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#programs">Programs</a></li>
-
-                <li><a href="#gallery">Gallery</a></li>
-
-                <li><a href="#admissions">Admissions</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-        <button class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
-
-    </div>
+</nav>
 
 </header>
 
@@ -67,547 +48,319 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <section class="hero" id="home">
 
-    <video autoplay muted loop playsinline class="hero-video">
+<video
+id="heroVideo"
+class="hero-video"
+autoplay
+muted
+loop
+playsinline>
 
-        <source src="VIDEO 1.mp4" type="video/mp4">
+<source src="VIDEO 1.mp4" type="video/mp4">
 
-    </video>
+</video>
 
-    <div class="hero-overlay"></div>
+<div class="hero-overlay"></div>
 
-    <div class="container hero-content">
+<div class="hero-content">
 
-        <span class="hero-tag">
-            Admissions Open
-        </span>
+<h1>
+Shape Your Future In Beauty & Technology
+</h1>
 
-        <h1>
-            Professional Beauty & Technology Training
-        </h1>
+<p>
+Professional hands-on training in Hairdressing,
+Barbering, Nail Technology, Makeup, Beauty Therapy,
+Massage and Spa Treatments.
+</p>
 
-        <p>
-            Build practical skills through hands-on learning,
-            professional guidance and industry-focused training.
-        </p>
+<div class="hero-buttons">
 
-        <div class="hero-buttons">
+<a href="#courses" class="btn btn-primary">
+Explore Courses
+</a>
 
-            <a href="#programs" class="btn btn-primary">
-                Explore Programs
-            </a>
+<a href="#contact" class="btn btn-secondary">
+Apply Today
+</a>
 
-            <a href="#contact" class="btn btn-outline">
-                Make An Inquiry
-            </a>
+</div>
 
-        </div>
+<button id="soundBtn" class="sound-btn">
+Enable Sound
+</button>
 
-    </div>
+</div>
 
 </section>
 
 <!-- ABOUT -->
 
-<section class="about section" id="about">
+<section class="about" id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="about-grid">
 
-            <span>About The College</span>
+<div class="about-text">
 
-            <h2>
-                Training Students For Real World Opportunities
-            </h2>
+<h2>
+About Zebu Institute
+</h2>
 
-        </div>
+<p>
+Zebu Institute of Beauty & Technology College is dedicated to empowering students with practical skills and industry knowledge.
+</p>
 
-        <div class="about-grid">
+<p>
+Our programs focus on hands-on learning, professional development and real-world experience to prepare students for employment and entrepreneurship.
+</p>
 
-            <div class="about-image">
+<div class="stats">
 
-                <img src="IMAGE 2.jpeg" alt="Training">
+<div class="stat">
+<h3>500+</h3>
+<p>Students Trained</p>
+</div>
 
-            </div>
+<div class="stat">
+<h3>10+</h3>
+<p>Professional Courses</p>
+</div>
 
-            <div class="about-content">
+<div class="stat">
+<h3>100%</h3>
+<p>Practical Training</p>
+</div>
 
-                <p>
-                    Zebu Institute of Beauty & Technology College
-                    provides practical and professional training
-                    in beauty, wellness and related career pathways.
-                </p>
+</div>
 
-                <p>
-                    Students benefit from practical sessions,
-                    instructor guidance and hands-on experience
-                    throughout their learning journey.
-                </p>
+</div>
 
-                <div class="features">
+<div class="about-image">
+<img src="IMAGE 1.jpeg" alt="Zebu Institute">
+</div>
 
-                    <div class="feature-box">
-                        Practical Learning
-                    </div>
+</div>
 
-                    <div class="feature-box">
-                        Professional Trainers
-                    </div>
-
-                    <div class="feature-box">
-                        Industry Skills
-                    </div>
-
-                    <div class="feature-box">
-                        Career Development
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- PROGRAMS -->
-
-<section class="programs section" id="programs">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Programs</span>
-
-            <h2>
-                Areas Of Training
-            </h2>
-
-        </div>
-
-        <div class="program-grid">
-
-            <div class="program-card">
-
-                <img src="IMAGE 3.jpeg" alt="Hairdressing">
-
-                <div class="program-content">
-
-                    <h3>Hairdressing</h3>
-
-                    <p>
-                        Learn modern styling techniques,
-                        hair care and salon operations.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="program-card">
-
-                <img src="IMAGE 5.jpeg" alt="Barbering">
-
-                <div class="program-content">
-
-                    <h3>Barbering</h3>
-
-                    <p>
-                        Professional grooming,
-                        shaving and client care.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="program-card">
-
-                <img src="IMAGE 10.jpeg" alt="Nail Technology">
-
-                <div class="program-content">
-
-                    <h3>Nail Technology</h3>
-
-                    <p>
-                        Nail care, manicure,
-                        pedicure and treatments.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="program-card">
-
-                <img src="IMAGE 9.jpeg" alt="Massage">
-
-                <div class="program-content">
-
-                    <h3>Massage Therapy</h3>
-
-                    <p>
-                        Practical wellness and
-                        therapeutic massage training.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="program-card">
-
-                <img src="IMAGE 4.jpeg" alt="Facial Therapy">
-
-                <div class="program-content">
-
-                    <h3>Beauty Therapy</h3>
-
-                    <p>
-                        Skin care, facial treatments
-                        and professional beauty services.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="program-card">
-
-                <img src="IMAGE11.jpeg" alt="Spa Training">
-
-                <div class="program-content">
-
-                    <h3>Spa Services</h3>
-
-                    <p>
-                        Learn practical spa and
-                        wellness procedures.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- WHY US -->
-
-<section class="why-us section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>Why Choose Zebu</span>
-
-            <h2>
-                Practical Learning Environment
-            </h2>
-
-        </div>
-
-        <div class="why-grid">
-
-            <div class="why-card">
-
-                <i class="fas fa-user-graduate"></i>
-
-                <h3>Practical Sessions</h3>
-
-                <p>
-                    Learn through hands-on activities.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <i class="fas fa-award"></i>
-
-                <h3>Professional Standards</h3>
-
-                <p>
-                    Industry-focused training approach.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <i class="fas fa-chalkboard-teacher"></i>
-
-                <h3>Experienced Trainers</h3>
-
-                <p>
-                    Guidance from qualified instructors.
-                </p>
-
-            </div>
-
-            <div class="why-card">
-
-                <i class="fas fa-briefcase"></i>
-
-                <h3>Career Focused</h3>
-
-                <p>
-                    Skills designed for employment.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+<!-- COURSES -->
+
+<section class="courses" id="courses">
+
+<div class="container">
+
+<h2 class="section-title">
+Popular Courses
+</h2>
+
+<div class="courses-grid">
+
+<div class="course-card">
+<img src="IMAGE 2.jpeg" alt="">
+<h3>Hairdressing & Beauty</h3>
+<p>Professional salon training and beauty services.</p>
+</div>
+
+<div class="course-card">
+<img src="IMAGE 3.jpeg" alt="">
+<h3>Nail Technology</h3>
+<p>Manicure, Pedicure and Nail Art skills.</p>
+</div>
+
+<div class="course-card">
+<img src="IMAGE 4.jpeg" alt="">
+<h3>Massage Therapy</h3>
+<p>Hands-on body treatment techniques.</p>
+</div>
+
+<div class="course-card">
+<img src="IMAGE 5.jpeg" alt="">
+<h3>Facial Treatment</h3>
+<p>Professional skincare and facial procedures.</p>
+</div>
+
+<div class="course-card">
+<img src="IMAGE 6.jpeg" alt="">
+<h3>Barbering</h3>
+<p>Modern barbering and grooming skills.</p>
+</div>
+
+<div class="course-card">
+<img src="IMAGE 7.jpeg" alt="">
+<h3>Makeup Artistry</h3>
+<p>Beauty makeup and cosmetic applications.</p>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- GALLERY -->
 
-<section class="gallery section" id="gallery">
+<section class="gallery" id="gallery">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<h2 class="section-title">
+Training Gallery
+</h2>
 
-            <span>Gallery</span>
+<div class="gallery-grid">
 
-            <h2>
-                Learning In Action
-            </h2>
+<img src="IMAGE 1.jpeg" alt="">
+<img src="IMAGE 2.jpeg" alt="">
+<img src="IMAGE 3.jpeg" alt="">
+<img src="IMAGE 4.jpeg" alt="">
+<img src="IMAGE 5.jpeg" alt="">
+<img src="IMAGE 6.jpeg" alt="">
+<img src="IMAGE 7.jpeg" alt="">
+<img src="IMAGE 8.jpeg" alt="">
+<img src="IMAGE 9.jpeg" alt="">
+<img src="IMAGE 10.jpeg" alt="">
+<img src="IMAGE 11.jpeg" alt="">
+<img src="IMAGE 7.jpeg" alt="">
 
-        </div>
+</div>
 
-        <div class="gallery-grid">
-
-            <div class="gallery-item">
-                <img src="IMAGE 2.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 3.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 4.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 5.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 6.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 7.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 8.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 9.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 10.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE11.jpeg" alt="">
-            </div>
-
-            <div class="gallery-item">
-                <img src="IMAGE 12.jpeg" alt="">
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- ADMISSIONS -->
+<!-- CAMPUS VIDEO -->
 
-<section class="admissions section" id="admissions">
+<section class="location-section">
 
-    <div class="container">
+<video
+class="location-video"
+autoplay
+muted
+loop
+playsinline>
 
-        <div class="section-heading">
+<source src="VIDEO 1.mp4" type="video/mp4">
 
-            <span>Admissions</span>
+</video>
 
-            <h2>
-                Enrollment Process
-            </h2>
+<div class="location-overlay"></div>
 
-        </div>
+<div class="location-content">
 
-        <div class="steps">
+<h2>
+Experience Practical Learning
+</h2>
 
-            <div class="step">
-                <span>01</span>
-                <h3>Select A Program</h3>
-            </div>
+<p>
+Learn in a professional environment where theory meets hands-on practice.
+</p>
 
-            <div class="step">
-                <span>02</span>
-                <h3>Submit Inquiry</h3>
-            </div>
-
-            <div class="step">
-                <span>03</span>
-                <h3>Registration</h3>
-            </div>
-
-            <div class="step">
-                <span>04</span>
-                <h3>Begin Training</h3>
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- INQUIRY FORM -->
+<!-- TESTIMONIALS -->
 
-<section class="inquiry section" id="contact">
+<section class="testimonials">
 
-    <div class="container">
+<div class="container">
 
-        <div class="inquiry-wrapper">
+<h2 class="section-title">
+Student Experience
+</h2>
 
-            <div class="inquiry-info">
+<div class="testimonial-grid">
 
-                <h2>
-                    Request Information
-                </h2>
+<div class="testimonial">
+<p>
+"The practical training gave me confidence and industry-ready skills."
+</p>
+<h4>Beauty Student</h4>
+</div>
 
-                <p>
-                    Interested in joining Zebu Institute?
-                    Send us your inquiry.
-                </p>
+<div class="testimonial">
+<p>
+"I learned professional barbering techniques that helped me start my own business."
+</p>
+<h4>Barbering Graduate</h4>
+</div>
 
-            </div>
+<div class="testimonial">
+<p>
+"The instructors focus on practical skills that employers value."
+</p>
+<h4>Hairdressing Student</h4>
+</div>
 
-            <form class="inquiry-form">
+</div>
 
-                <input type="text"
-                placeholder="Full Name"
-                required>
-
-                <input type="email"
-                placeholder="Email Address"
-                required>
-
-                <input type="tel"
-                placeholder="Phone Number"
-                required>
-
-                <select required>
-
-                    <option>
-                        Select Program
-                    </option>
-
-                    <option>
-                        Hairdressing
-                    </option>
-
-                    <option>
-                        Barbering
-                    </option>
-
-                    <option>
-                        Nail Technology
-                    </option>
-
-                    <option>
-                        Beauty Therapy
-                    </option>
-
-                    <option>
-                        Massage Therapy
-                    </option>
-
-                </select>
-
-                <textarea
-                rows="5"
-                placeholder="Message"></textarea>
-
-                <button type="submit"
-                class="btn btn-primary">
-
-                    Submit Inquiry
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- LOCATION VIDEO -->
+<!-- CONTACT -->
 
-<section class="location-video">
+<section class="contact" id="contact">
 
-    <video autoplay muted loop playsinline>
+<div class="container">
 
-        <source src="VIDEO 1.mp4" type="video/mp4">
+<div class="contact-grid">
 
-    </video>
+<div>
 
-    <div class="location-overlay"></div>
+<h2>
+Admissions & Inquiries
+</h2>
 
-    <div class="location-content">
+<p>
+Ready to start your professional journey?
+Contact us today.
+</p>
 
-        <h2>
-            Visit Zebu Institute Of Beauty & Technology College
-        </h2>
+<div class="contact-info">
 
-        <p>
-            Discover a professional learning environment
-            designed to support practical skills development.
-        </p>
+<p><strong>Phone:</strong> 0117 313 131</p>
 
-    </div>
+<p><strong>WhatsApp:</strong> 0117 313 131</p>
 
-</section>
+<p><strong>Email:</strong> admissions@zebuinstitute.com</p>
 
-<!-- CTA -->
+</div>
 
-<section class="cta">
+</div>
 
-    <div class="container">
+<form class="inquiry-form">
 
-        <h2>
-            Start Your Learning Journey Today
-        </h2>
+<input type="text" placeholder="Full Name" required>
 
-        <a href="#contact" class="btn btn-primary">
+<input type="email" placeholder="Email Address" required>
 
-            Contact Admissions
+<input type="tel" placeholder="Phone Number" required>
 
-        </a>
+<select required>
+<option value="">Select Course</option>
+<option>Hairdressing & Beauty</option>
+<option>Barbering</option>
+<option>Nail Technology</option>
+<option>Massage Therapy</option>
+<option>Facial Treatment</option>
+</select>
 
-    </div>
+<textarea rows="5" placeholder="Your Inquiry"></textarea>
+
+<button type="submit" class="btn btn-primary">
+Submit Inquiry
+</button>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
@@ -615,66 +368,32 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <footer class="footer">
 
-    <div class="container footer-grid">
+<div class="container">
 
-        <div>
+<h3>
+Zebu Institute of Beauty & Technology College
+</h3>
 
-            <img src="IMAGE 1.jpeg"
-            alt="Logo"
-            class="footer-logo">
+<p>
+Professional Training For Future Beauty Professionals.
+</p>
 
-            <h3>
-                Zebu Institute
-            </h3>
+<p>
+© 2026 All Rights Reserved
+</p>
 
-            <p>
-                Beauty & Technology College
-            </p>
-
-        </div>
-
-        <div>
-
-            <h4>Navigation</h4>
-
-            <a href="#home">Home</a><br>
-            <a href="#about">About</a><br>
-            <a href="#programs">Programs</a><br>
-            <a href="#gallery">Gallery</a>
-
-        </div>
-
-        <div>
-
-            <h4>Programs</h4>
-
-            <a href="#">Hairdressing</a><br>
-            <a href="#">Barbering</a><br>
-            <a href="#">Beauty Therapy</a><br>
-            <a href="#">Massage Therapy</a>
-
-        </div>
-
-    </div>
-
-    <div class="copyright">
-
-        <p>
-            © 2026 Zebu Institute of Beauty &
-            Technology College. All Rights Reserved.
-        </p>
-
-    </div>
+</div>
 
 </footer>
 
-<!-- WHATSAPP -->
+<!-- FLOATING WHATSAPP -->
 
-<a href="https://wa.me/254700000000"
+<a
+href="https://wa.me/254117313131"
 class="whatsapp-btn"
 target="_blank">
 
-<i class="fab fa-whatsapp"></i>
+WhatsApp
 
 </a>
 
